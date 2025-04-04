@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap');
+
+.student-dashboard {
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    background: linear-gradient(135deg, #F5F5F7 0%, #EDDFE0 100%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.student-info {
+    background: rgba(245, 245, 247, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(183, 183, 183, 0.3);
+    backdrop-filter: blur(8px);
+    display: inline-block;
+    text-align: left;
+    margin-top: 30px;
+    border: 1px solid #B7B7B7;
+    width: 90%;
+    max-width: 800px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.student-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #705C53;
+    line-height: 1.6;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.editable-input {
+    border: 2px solid #B7B7B7;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #705C53;
+    transition: all 0.3s ease;
+}
+
+.editable-input:focus {
+    border-color: #705C53;
+    box-shadow: 0 0 0 3px rgba(112, 92, 83, 0.1);
+    outline: none;
+}
+
+.save-btn {
+    background: linear-gradient(145deg, #B7B7B7, #705C53);
+    color: #F5F5F7;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: 600;
+}
+
+.floating-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.floating-btn {
+    width: 250px;
+    height: 65px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #F5F5F7;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #B7B7B7, #705C53);
+    box-shadow: 0 8px 32px rgba(183, 183, 183, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.floating-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.floating-btn:hover::before {
+    left: 100%;
+}
+
+.floating-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(112, 92, 83, 0.4);
+}
+
+.logout-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.logout-btn {
+    background: linear-gradient(145deg, #B7B7B7, #705C53);
+    color: #F5F5F7;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(112, 92, 83, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.logout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(112, 92, 83, 0.4);
+    background: linear-gradient(145deg, #705C53, #B7B7B7);
+}
+
+.success-message {
+    color: #705C53;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(245, 245, 247, 0.9);
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #B7B7B7, #705C53);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #F5F5F7;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(112, 92, 83, 0.3);
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(112, 92, 83, 0.4);
+    background: linear-gradient(145deg, #705C53, #B7B7B7);
+}
+
+.certificates-section {
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(245, 245, 247, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(183, 183, 183, 0.3);
+    border: 1px solid #B7B7B7;
+    max-width: 800px;
+    width: 90%;
+}
+
+.upload-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(112, 92, 83, 0.2);
+}
+
+.certificates-list {
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.section-title {
+    color: #705C53;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #705C53, transparent);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .student-dashboard {
+        padding: 20px;
+    }
+
+    .floating-buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .floating-btn {
+        width: 90%;
+        max-width: 300px;
+        margin: 5px;
+    }
+
+    .student-info {
+        padding: 20px;
+        margin-top: 70px;
+    }
+
+    .certificates-section {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

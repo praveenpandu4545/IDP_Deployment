@@ -1,0 +1,101 @@
+.certificates-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #F5F5F7 0%, #EDDFE0 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(183, 183, 183, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid #B7B7B7;
+  animation: fadeIn 0.8s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.certificate-card {
+  background: rgba(245, 245, 247, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(112, 92, 83, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid #B7B7B7;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #705C53, #B7B7B7);
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(112, 92, 83, 0.25);
+  background: rgba(245, 245, 247, 0.98);
+}
+
+.certificate-title {
+  color: #705C53;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.certificate-info {
+  color: #705C53;
+  font-size: 1rem;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.view-btn, .delete-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 0.5px;
+}
+
+.view-btn {
+  background: linear-gradient(145deg, #B7B7B7, #705C53);
+  color: #F5F5F7;
+  box-shadow: 0 4px 15px rgba(112, 92, 83, 0.2);
+}
+
+.delete-btn {
+  background: rgba(245, 245, 247, 0.95);
+  color: #705C53;
+  border: 2px solid #705C53;
+}
+
+.view-btn:hover {
+  background: linear-gradient(145deg, #705C53, #B7B7B7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 92, 83, 0.3);
+}
+
+.delete-btn:hover {
+  background: rgba(112, 92, 83, 0.1);
+  transform: translateY(-2px);
+}
+
+.no-certificates {
+  text-align: center;
+  color: #705C53;
+  font-size: 1.2rem;
+  margin: 40px 0;
+  padding: 30px;
+  background: rgba(245, 245, 247, 0.9);
+  border-radius: 15px;
+  border: 1px solid #B7B7B7;
+  font-family: 'Playfair Display', serif;
+}

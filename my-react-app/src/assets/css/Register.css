@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #F5F5F7 0%, #EDDFE0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path-to-your-subtle-pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.register-container {
+    background: rgba(245, 245, 247, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 
+        0 8px 32px rgba(183, 183, 183, 0.3),
+        0 4px 8px rgba(112, 92, 83, 0.1);
+    text-align: center;
+    width: 450px;
+    margin: auto;
+    border: 1px solid #B7B7B7;
+    animation: fadeIn 0.8s ease-out;
+    position: relative;
+    overflow-y: auto;
+    max-height: calc(100vh - 4rem);
+}
+
+.register-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.register-container::-webkit-scrollbar-track {
+    background: rgba(183, 183, 183, 0.1);
+    border-radius: 4px;
+}
+
+.register-container::-webkit-scrollbar-thumb {
+    background: #B7B7B7;
+    border-radius: 4px;
+}
+
+.register-container::-webkit-scrollbar-thumb:hover {
+    background: #705C53;
+}
+
+.register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #705C53, #B7B7B7);
+}
+
+h1 {
+    color: #705C53;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #705C53;
+}
+
+.form-group {
+    margin: 25px 0;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    color: #705C53;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    transform-origin: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: 2px solid #B7B7B7;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #705C53;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #705C53;
+    box-shadow: 0 0 0 3px rgba(112, 92, 83, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group:focus-within label {
+    transform: scale(1.05);
+    color: #705C53;
+}
+
+input::placeholder {
+    color: #B7B7B7;
+    opacity: 0.7;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(145deg, #B7B7B7, #705C53);
+    color: #F5F5F7;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(112, 92, 83, 0.3);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(145deg, #705C53, #B7B7B7);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(112, 92, 83, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(112, 92, 83, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    .register-container {
+        width: 90%;
+        padding: 25px;
+        margin: auto;
+        max-height: calc(100vh - 2rem);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, select, .submit-btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .form-group {
+        margin: 20px 0;
+    }
+}
